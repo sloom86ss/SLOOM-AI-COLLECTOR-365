@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>SLOOM DRAMA 365</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080808;color:#fff;font-family:Arial,sans-serif}
+header{background:linear-gradient(135deg,#17120b,#080808);padding:22px 15px;text-align:center;border-bottom:1px solid #b99142}
+.logo{font-size:27px;font-weight:bold;color:#e9c477}
+.logo span{color:white}
+header p{color:#aaa;font-size:12px;margin:8px 0}
+nav{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;padding:13px 8px;background:#111}
+nav a{color:#e8c779;text-decoration:none;padding:9px 13px;border:1px solid #59451f;border-radius:20px;font-size:13px}
+.hero{margin:15px;border-radius:14px;padding:30px 15px;background:linear-gradient(130deg,#392b16,#14100b,#080808);text-align:center}
+.hero h1{color:#f0ce83;font-size:24px}
+.hero p{color:#ddd;font-size:14px}
+.search{margin:15px}
+input{width:100%;padding:14px;border:1px solid #a98542;border-radius:9px;background:#171717;color:white;font-size:15px}
+section{padding:10px 14px}
+h2{font-size:19px;color:#e9c477;border-right:3px solid #c49b4d;padding-right:10px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:#171717;border:1px solid #302719;border-radius:11px;overflow:hidden}
+.poster{height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#332719,#111);font-size:43px}
+.info{padding:10px}
+.info h3{font-size:14px;margin:3px 0 8px}
+.info p{font-size:11px;color:#aaa;margin:0}
+.tag{display:inline-block;color:#e8c477;font-size:11px;margin-top:8px}
+button{background:#b38a42;color:#080808;border:0;padding:9px 14px;border-radius:7px;margin-top:10px;font-weight:bold}
+.empty{color:#aaa;text-align:center;padding:20px}
+footer{text-align:center;padding:25px;color:#888;font-size:12px;border-top:1px solid #302719;margin-top:30px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.poster{height:210px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">SLOOM <span>DRAMA</span> 365</div>
+<p>عالم الأفلام والمسلسلات المدبلجة بالعربية</p>
+</header>
+
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#series">المسلسلات</a>
+<a href="#movies">الأفلام</a>
+<a href="#korean">كوري</a>
+<a href="#turkish">تركي</a>
+<a href="#foreign">أجنبي</a>
+</nav>
+
+<div class="hero" id="home">
+<h1>مرحباً بكم في SLOOM DRAMA 365</h1>
+<p>اكتشف عالماً من الدراما والأكشن والرومانسية والإثارة</p>
+</div>
+
+<div class="search">
+<input id="search" type="search" placeholder="ابحث عن فيلم أو مسلسل..." oninput="filterCards()">
+</div>
+
+<section id="series">
+<h2>المسلسلات</h2>
+<div class="grid">
+<div class="card"><div class="poster">🎭</div><div class="info"><h3>المسلسلات الكورية</h3><p>دراما ورومانسية وأكشن</p><span class="tag">كوري</span></div></div>
+<div class="card"><div class="poster">❤️</div><div class="info"><h3>المسلسلات التركية</h3><p>حب وتشويق ودراما</p><span class="tag">تركي</span></div></div>
+<div class="card"><div class="poster">🎬</div><div class="info"><h3>المسلسلات الأجنبية</h3><p>أعمال عالمية متنوعة</p><span class="tag">أجنبي</span></div></div>
+<div class="card"><div class="poster">⚔️</div><div class="info"><h3>مسلسلات الأكشن</h3><p>مغامرات وإثارة</p><span class="tag">أكشن</span></div></div>
+</div>
+</section>
+
+<section id="movies">
+<h2>الأفلام</h2>
+<div class="grid">
+<div class="card"><div class="poster">🍿</div><div class="info"><h3>أفلام الأكشن</h3><p>أفلام مليئة بالإثارة</p><span class="tag">أكشن</span></div></div>
+<div class="card"><div class="poster">💗</div><div class="info"><h3>أفلام رومانسية</h3><p>قصص حب مميزة</p><span class="tag">رومانسي</span></div></div>
+<div class="card"><div class="poster">🔥</div><div class="info"><h3>أفلام الإثارة</h3><p>تشويق وغموض</p><span class="tag">إثارة</span></div></div>
+<div class="card"><div class="poster">🌍</div><div class="info"><h3>أفلام عالمية</h3><p>سينما من مختلف البلدان</p><span class="tag">أجنبي</span></div></div>
+</div>
+</section>
+
+<section id="korean">
+<h2>الدراما الكورية</h2>
+<p class="empty">سيتم عرض الأعمال الكورية المتاحة قانونياً والمدبلجة بالعربية هنا.</p>
+</section>
+
+<section id="turkish">
+<h2>الدراما التركية</h2>
+<p class="empty">سيتم عرض الأعمال التركية المتاحة قانونياً والمدبلجة بالعربية هنا.</p>
+</section>
+
+<section id="foreign">
+<h2>الدراما الأجنبية</h2>
+<p class="empty">سيتم عرض الأعمال الأجنبية المتاحة قانونياً والمدبلجة بالعربية هنا.</p>
+</section>
+
+<footer>
+SLOOM DRAMA 365 © 2026
+<br><br>
+منصة ترفيهية للأعمال المتاحة قانونياً
+</footer>
+
+<script>
+function filterCards(){
+const q=document.getElementById('search').value.trim().toLowerCase();
+document.querySelectorAll('.card').forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(q)?'':'none';
+});
+}
+</script>
+</body>
+</html>
